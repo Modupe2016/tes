@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #00AFD3;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    margin-right: 20px;
+}
+
+.app-logo {
+    width: 100px;  
+    height: 100px; 
+    object-fit: cover; 
+}
+
+.title {
+    font-size: 2em;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h2 {
+    background-color: #E0E0E0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 .expand-btn {
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+ul.apps {
+    list-style: none;
+    padding: 0;
+}
+
+ul.apps li {
+    background-color: #F5F5F5;
+    border: 1px solid #E0E0E0;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* added changes */
+    align-items: flex-start;   /*changes from center to flex-start*/
+    /* justify-content: space-between;   removed changes */
+}
+
+ul.apps li a {
+    text-decoration: none;
+    color: black;
+    display: flex;  /* added changes */
+    align-items: center; /* added changes */
+}
+
+ul.apps li a:hover {
+    text-decoration: underline;
+}
+
+ul.apps li img.applogo {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+ul.apps li .app-details {  /* added changes */
+    flex: 1;
+}
+
+ul.apps li .app-info {  /* added changes */
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.contact {  /* added changes */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.contact-name {   /* added changes */
+    cursor: pointer;
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+
+ul.apps li h3 {
+    margin: 0;
+}
+
+.contact-icons {
+    display: none;   /* changes  from flex to none */
+    align-items: center;
+   /* margin-top: 10px;  removed, newly added from below */
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #F5F5F5;
+    border: 1px solid #E0E0E0;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #7292a8;
+    padding: 5px;
+}
+
+.contact-icons a:hover {
+    background-color: #0056b3;
+}
+
+.contact:hover .contact-icons {
+    display: flex;
+}
+
+
+.contact-icons img {
+    height: 70%;
+    width: auto;
+}
+
+/*.app-info {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/*@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin: 0 0 10px 0;
+    }
+}
+*/
+
+
+.expandable-content {
+			display: none;
+		}
+		.expandable-content.show {
+			display: block;
+		}
+		.expand-btn {
+			cursor: pointer;
+			color: #007BFF;
+			font-size: 1.2em;
+			margin-left: 10px;
+			transition: transform 0.3s ease;
+		}
+		.expand-btn .fa-plus-circle {
+			color: #327fa3;
+		}
+		.expand-btn .fa-minus-circle {
+			color: #327fa3;
+		}
+
+.software-overview-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+}
+
+.software-overview {
+    list-style: none;
+    padding: 0;
+}
+
+.software-overview li {
+    margin-bottom: 20px;
+}
+
+.software-overview li h3 {
+    margin-bottom: 10px;
+}
+
+.software-overview li p,
+.software-overview li ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+
+
+.software-overview-container {
+    background-color: #f8f9fa; /* Light background for the section */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.software-overview-container h2 {
+    background-color: #343a40; /* Dark background for the headers */
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.software-overview-container h3 {
+    background-color: #327fa3; /* Primary blue background for sub-headers */
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.software-overview-container ul,
+.software-overview-container p {
+    background-color: #e9ecef; /* Light grey background for content areas */
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.software-overview-container li {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #dee2e6; /* Light border for list items */
+}
+
+.software-overview-container a {
+    color: #327fa3; /* Primary blue color for links */
+    text-decoration: none;
+}
+
+.software-overview-container a:hover {
+    text-decoration: underline;
+}
+
+footer {
+	background-color: #00AFD3;
+	color: #333;
+	padding: 1px;
+	text-align: center;
+}
+
+
+
